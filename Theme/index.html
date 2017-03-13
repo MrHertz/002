@@ -43,7 +43,8 @@
             var order = {
                 complite: function (id) {
                     let list = document.querySelector('#point' + id);
-                    console.log(list.getElementsByTagName('li')[0].innerText);
+                    let text = list.getElementsByTagName('li')[0].innerText + ', ' + list.getElementsByTagName('li')[1].innerText + ', ' + list.getElementsByTagName('li')[2].innerText + ' ';
+                    document.querySelector('#order_text').value = text;
                 }
             }
         </script>
@@ -295,7 +296,7 @@
 									<li>Крутой цвет</li>
 									<li>В комплекте вот</li>
 									<li>Гарантии нет</li>
-									<li><a onclick="order.complite(1); return false;" >заказать</a></li>
+									<li><a href="#order" onclick="order.complite(1); return false;" >заказать</a></li>
 								</ul>
 							</div>
 						</div>
@@ -312,7 +313,7 @@
 									<li>Другой цвет</li>
 									<li>В комплекте вот</li>
 									<li>Гарантия вот</li>
-									<li><a onclick="order.complite(2); return false;">заказать</a></li>
+									<li><a href="#order" onclick="order.complite(2); return false;">заказать</a></li>
 								</ul>
 							</div>
 						</div>
@@ -329,7 +330,7 @@
 									<li>Шикарный цвет</li>
 									<li>Гарантия шик</li>
 									<li>В комплекте все</li>
-									<li><a onclick="order.complite(3); return false;">заказать</a></li>
+									<li><a href="#order" onclick="order.complite(3); return false;">заказать</a></li>
 								</ul>
 							</div>
 						</div>
@@ -360,7 +361,7 @@
 				</div>
 			</section>
 			<!-- end Social section -->
-			
+			<a style="display: none;" name="order"></a>
 			<!-- Contact section -->
 			<section id="contact" >
 				<div class="container">
@@ -384,7 +385,7 @@
 									<input type="text" name="subject" class="form-control" placeholder="Телефон..." required>
 								</div>
 								<div class="input-field">
-									<textarea name="message" class="form-control" placeholder="Сообщение..." required></textarea>
+									<textarea id="order_text" name="message" class="form-control" placeholder="Сообщение..." required></textarea>
 								</div>
 						       	<button type="submit" id="submit" class="btn btn-blue btn-effect">Send</button>
 							</form>
