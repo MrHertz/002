@@ -43,7 +43,8 @@
             var order = {
                 complite: function (id) {
                     let list = document.querySelector('#point' + id);
-                    let text = list.getElementsByTagName('li')[0].innerText + ', ' + list.getElementsByTagName('li')[1].innerText + ', ' + list.getElementsByTagName('li')[2].innerText + ' ';
+                    let name = document.querySelector('#title-point' + id);
+                    let text = name.innerText + ': ' + list.getElementsByTagName('li')[0].innerText + ', ' + list.getElementsByTagName('li')[1].innerText + ', ' + list.getElementsByTagName('li')[2].innerText + ' ';
                     document.querySelector('#order_text').value = text;
                 }
             }
@@ -284,7 +285,7 @@
 						
 						<div class="col-md-4 wow animated fadeInUp">
 							<div class="price-table text-center">
-								<span>Original HV 260</span>
+								<span id="title-point1">Original HV 260</span>
 								<div class="value">
 									<!--<span>$</span>-->
 									<span>2790р</span><br>
@@ -294,6 +295,7 @@
 									<li>2 режима 5000/6000</li>
 									<li>Длина провода 1,8м</li>
 									<li>Мотор в корпусе</li>
+									<li>Гарантия - 1 год</li>
 									<li><a href="#order" onclick="order.complite(1);" >заказать</a></li>
 								</ul>
 							</div>
@@ -301,7 +303,7 @@
 						
 						<div class="col-md-4 wow animated fadeInUp" data-wow-delay="0.4s">
 							<div class="price-table featured text-center">
-								<span>Rechargeable HV 270</span>
+								<span id="title-point2">Rechargeable HV 270</span>
 								<div class="value">
 									<!--<span>$</span>-->
 									<span>4990р</span><br>
@@ -311,6 +313,7 @@
 									<li>4 режима 2700, 3800, 5400, 6300</li>
 									<li>3 часа от аккумулятора</li>
 									<li>Трансформатор не нужен</li>
+									<li>Гарантия - 1 год</li>
 									<li><a href="#order" onclick="order.complite(2);">заказать</a></li>
 								</ul>
 							</div>
@@ -318,7 +321,7 @@
 						
 						<div class="col-md-4 wow animated fadeInUp" data-wow-delay="0.8s">
 							<div class="price-table text-center">
-								<span>Виниловая насадка</span>
+								<span id="title-point3">Виниловая насадка</span>
 								<div class="value">
 									<!--<span>$</span>-->
 									<span>490р</span><br>
@@ -327,7 +330,8 @@
 								<ul id="point3">
 									<li>Прекрасное дополнение к Magic Wand</li>
 									<li>Проста в уходе</li>
-									<li>В комплекте все</li>
+									<li>Внутренняя/внешняя стимуляция</li>
+									<li>Гарантия - 1 год</li>
 									<li><a href="#order" onclick="order.complite(3);">заказать</a></li>
 								</ul>
 							</div>
